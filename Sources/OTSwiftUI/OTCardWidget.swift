@@ -43,6 +43,12 @@ public struct OTCardWidget: View {
         .scaleEffect(isSelected ? 1.1 : 1)
     }
 
+    public init(isSelected: Bool, title: String, subtitle: String, color: Color = .blue) {
+        self.isSelected = isSelected
+        self.title = title
+        self.subtitle = subtitle
+        self.color = color
+    }
     
     private func CustomText(_ string: String) -> Text {
         Text(string)
