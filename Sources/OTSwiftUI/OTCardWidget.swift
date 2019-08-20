@@ -27,13 +27,13 @@ public struct OTCardWidget: View {
             
         
             VStack(alignment: .leading) {
-                CustomText(title)
+                customText(title)
                     .font(.roundedTitle)
                     
                 
                 Spacer()
                 
-                CustomText(subtitle)
+                customText(subtitle)
                     .font(.monospacedTitle)
                     
             }
@@ -50,7 +50,7 @@ public struct OTCardWidget: View {
         self.color = color
     }
     
-    private func CustomText(_ string: String) -> Text {
+    private func customText(_ string: String) -> Text {
         Text(string)
             .foregroundColor(isSelected ? colors.selectedTextColor : colors.textColor)
         
