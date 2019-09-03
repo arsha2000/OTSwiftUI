@@ -48,21 +48,3 @@ where  Content: View, DataCollection: MutableCollection, DataCollection.Element:
     }
 }
 
-#if DEBUG
-struct OTPicker_Previews: PreviewProvider {
-    static var previews: some View {
-        let collection = ["Note", "Favorite"]
-        return OTPicker(collection, selection: .constant(collection[0])) { (text, isSelected) in
-            OTCardWidget(isSelected: isSelected, title: text, subtitle: "\(1)")
-                .frame(width: 150, height: 170)
-            
-        }
-    }
-}
-
-extension String: Identifiable {
-    fileprivate var id: Int {
-        self.hashValue
-    }
-}
-#endif
