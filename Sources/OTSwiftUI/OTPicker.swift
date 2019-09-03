@@ -61,7 +61,7 @@ struct OTPicker_Previews: PreviewProvider {
 }
 
 extension String: Identifiable {
-    public var id: Int {
+    fileprivate var id: Int {
         self.hashValue
     }
 }
